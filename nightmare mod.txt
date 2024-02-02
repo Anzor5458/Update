@@ -1,0 +1,307 @@
+firesignal(game:GetService("ReplicatedStorage").EntityInfo.Caption.OnClientEvent, 'nightmare mod',,true,2)
+wait(1)
+firesignal(game:GetService("ReplicatedStorage").EntityInfo.Caption.OnClientEvent, 'Credits to Anzor for Making nightmare mod,true,1)
+-- Custom Door Sounds
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Anzor5458/Seeknew/main/Ceiling.txt')))()
+loadstring(game:HttpGet("https://pastebin.com/raw/iAhTGdBh"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/6brG9uma"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/iCherryKardes/Doors/main/Floor%202%20Mod"))()
+ 
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+        game:GetService("ReplicatedStorage").GameData.GameStarted.Value
+Lowest = string.len(game:GetService("ReplicatedStorage").GameData.GameStarted.Value)
+Lowest = tonumber(Lowest)
+Stop=Lowest
+RanWait2=""
+function Abyss()
+    while true do task.wait()
+    pcall(function()
+        Be=true
+ 
+        wait(30)
+        wait(10)
+        local room = workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")]
+local color = Color3.fromRGB(255, 0, 0)
+		room.LightBase.SurfaceLight.Enabled = true
+		room.LightBase.SurfaceLight.Color = color
+		for _, thing in pairs(room.Assets:GetDescendants()) do
+			if thing:FindFirstChild"LightFixture" then
+				thing.LightFixture.Neon.Color = color
+				for _, light in pairs(thing.LightFixture:GetChildren()) do
+					if light:IsA("SpotLight") or light:IsA("PointLight") then
+						light.Color = color
+					end
+				end
+			end
+		end
+		
+        local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+ 
+        -- Create entity
+        if  game.ReplicatedStorage.GameData.LatestRoom.Value ~= 100 then
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        else
+            Wait(20)
+            end
+        local Abssy = Creator.createEntity({
+            CustomName = "Abyss", -- Custom name of your entity
+            Model = "https://raw.githubusercontent.com/Anzor5458/O/main/Abyss.txt", -- Can be GitHub file or rbxassetid
+            Speed = 750, -- Percentage, 100 = default Rush speed
+            DelayTime = 5,
+            KillRange=2,-- Time before starting cycles (seconds)
+            HeightOffset = 1,
+            CanKill = true,
+            BreakLights = true,
+            FlickerLights = {
+                true, -- Enabled
+                1, -- Time (seconds)
+            },
+            Cycles = {
+                Min = 2,
+                Max = 2,
+                WaitTime = 11,
+            },
+            CamShake = {
+                true, -- Enabled
+                {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+                100, -- Shake start distance (from Entity to you)
+            },
+            Jumpscare = {
+                true, -- Enabled ('false' if you don't want jumpscare)
+                {
+                    Image1 = "", -- Image1 url
+                    Image2 = "", -- Image2 url
+                    Shake = true,
+                    Sound1 = {
+                        10483790459, -- SoundId
+                        { Volume = 0.5 }, -- Sound properties
+                    },
+                    Sound2 = {
+                        5263560566, -- SoundId
+                        { Volume = 0.5 }, -- Sound properties
+                    },
+                    Flashing = {
+                        true, -- Enabled
+                        Color3.fromRGB(50, 115, 108), -- Color
+                    },
+                    Tease = {
+                        false, -- Enabled ('false' if you don't want tease)
+                        Min = 1,
+                        Max = 9,
+                    },
+                },
+            },
+            CustomDialog = {"You died to who you call Abssy", "Abssy is faster than rush and ambush", "And he can rebound 2 Times","use what you leared from Ambush and rush tho.","I am Nerfing All Of Entitys","To not spawn in No Hiding Spots Rooms"}, -- Custom death message (can be as long as you want)
+        })
+ 
+-----[[  Debug -=- Advanced  ]]-----
+Abyss.Debug.OnEntityDespawned = function()
+            if getgenv().death == false then
+                AchievementsGet(AbyssW)
+            end
+end
+ 
+            Abssy.Debug.OnDeath = function()
+                getgenv().death = true
+ 
+                AchievementsGet(Abyss)
+            end
+ 
+            ------------------------
+ 
+            -- Run the created entity
+            Creator.runEntity(Abyss)
+                            end)
+        end
+ 
+ 
+end
+
+        game:GetService("ReplicatedStorage").GameData.GameStarted.Value
+Lowest = string.len(game:GetService("ReplicatedStorage").GameData.GameStarted.Value)
+Lowest = tonumber(Lowest)
+Stop=Lowest
+RanWait2=""
+function Blcok()
+    while true do task.wait()
+    pcall(function()
+        Be=true
+ 
+        wait(30)
+        wait(10)
+        local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+ 
+        -- Create entity
+        if  game.ReplicatedStorage.GameData.LatestRoom.Value ~= 50 then
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        else
+            Wait(20)
+            end
+        local Block= Creator.createEntity({
+            CustomName = "Block", -- Custom name of your entity
+            Model = "https://raw.githubusercontent.com/Anzor5458/O/main/block.txt", -- Can be GitHub file or rbxassetid
+            Speed = 50, -- Percentage, 100 = default Rush speed
+            DelayTime = 5,
+            KillRange=100,-- Time before starting cycles (seconds)
+            HeightOffset = 1,
+            CanKill = true,
+            BreakLights = true,
+            FlickerLights = {
+                true, -- Enabled
+                1, -- Time (seconds)
+            },
+            Cycles = {
+                Min = 2,
+                Max = 10,
+                WaitTime = 2,
+            },
+            CamShake = {
+                true, -- Enabled
+                {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+                100, -- Shake start distance (from Entity to you)
+            },
+            Jumpscare = {
+                true, -- Enabled ('false' if you don't want jumpscare)
+                {
+                    Image1 = "", -- Image1 url
+                    Image2 = "", -- Image2 url
+                    Shake = true,
+                    Sound1 = {
+                        10483790459, -- SoundId
+                        { Volume = 0.5 }, -- Sound properties
+                    },
+                    Sound2 = {
+                        5263560566, -- SoundId
+                        { Volume = 0.5 }, -- Sound properties
+                    },
+                    Flashing = {
+                        true, -- Enabled
+                        Color3.fromRGB(50, 115, 108), -- Color
+                    },
+                    Tease = {
+                        false, -- Enabled ('false' if you don't want tease)
+                        Min = 1,
+                        Max = 5,
+                    },
+                },
+            },
+            CustomDialog = {"You died to who you call Block", "Block is faster than rush and ambush", "And he can rebound 2 Times","use what you leared from Ambush and rush tho.","I am Nerfing All Of Entitys","To not spawn in No Hiding Spots Rooms"}, -- Custom death message (can be as long as you want)
+        })
+ 
+-----[[  Debug -=- Advanced  ]]-----
+Block.Debug.OnEntityDespawned = function()
+            if getgenv().death == false then
+                AchievementsGet(Block)
+            end
+end
+ 
+            Block.Debug.OnDeath = function()
+                getgenv().death = true
+ 
+                AchievementsGet(Block)
+            end
+ 
+            ------------------------
+ 
+            -- Run the created entity
+            Creator.runEntity(Block)
+                            end)
+        end
+ 
+ 
+end
+
+        game:GetService("ReplicatedStorage").GameData.GameStarted.Value
+Lowest = string.len(game:GetService("ReplicatedStorage").GameData.GameStarted.Value)
+Lowest = tonumber(Lowest)
+Stop=Lowest
+RanWait2=""
+function Glare()
+    while true do task.wait()
+    pcall(function()
+        Be=true
+ 
+        wait(30)
+        wait(10)
+        local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+ 
+        -- Create entity
+        if  game.ReplicatedStorage.GameData.LatestRoom.Value ~= 50 then
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        else
+            Wait(20)
+            end
+        local Glare = Creator.createEntity({
+            CustomName = "Glare", -- Custom name of your entity
+            Model = "https://raw.githubusercontent.com/Anzor5458/O/main/Glare.txt", -- Can be GitHub file or rbxassetid
+            Speed = 1000000000000000000000, -- Percentage, 100 = default Rush speed
+            DelayTime = 5,
+            KillRange=100,-- Time before starting cycles (seconds)
+            HeightOffset = 1,
+            CanKill = true,
+            BreakLights = true,
+            FlickerLights = {
+                true, -- Enabled
+                1, -- Time (seconds)
+            },
+            Cycles = {
+                Min = 2,
+                Max = 1,
+                WaitTime = 2,
+            },
+            CamShake = {
+                true, -- Enabled
+                {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+                100, -- Shake start distance (from Entity to you)
+            },
+            Jumpscare = {
+                true, -- Enabled ('false' if you don't want jumpscare)
+                {
+                    Image1 = "", -- Image1 url
+                    Image2 = "", -- Image2 url
+                    Shake = true,
+                    Sound1 = {
+                        10483790459, -- SoundId
+                        { Volume = 0.5 }, -- Sound properties
+                    },
+                    Sound2 = {
+                        5263560566, -- SoundId
+                        { Volume = 0.5 }, -- Sound properties
+                    },
+                    Flashing = {
+                        true, -- Enabled
+                        Color3.fromRGB(50, 115, 108), -- Color
+                    },
+                    Tease = {
+                        false, -- Enabled ('false' if you don't want tease)
+                        Min = 1,
+                        Max = 5,
+                    },
+                },
+            },
+            CustomDialog = {"You died to who you call Glare", "Glare is faster than rush and ambush", "And he can rebound 2 Times","use what you leared from Ambush and rush tho.","I am Nerfing All Of Entitys","To not spawn in No Hiding Spots Rooms"}, -- Custom death message (can be as long as you want)
+        })
+ 
+-----[[  Debug -=- Advanced  ]]-----
+Glare.Debug.OnEntityDespawned = function()
+            if getgenv().death == false then
+                AchievementsGet(Glare)
+            end
+end
+ 
+            Glare.Debug.OnDeath = function()
+                getgenv().death = true
+ 
+                AchievementsGet(Glare)
+            end
+ 
+            ------------------------
+ 
+            -- Run the created entity
+            Creator.runEntity(Glare)
+                            end)
+        end
+ 
+ 
+end
